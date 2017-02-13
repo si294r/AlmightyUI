@@ -1,0 +1,7 @@
+<Directory "/var/www/html/cloudcode">
+    RewriteEngine On
+    RewriteBase "/cloudcode"
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php/$1 [L]
+</Directory> 
